@@ -28,7 +28,7 @@ KManager.action :bootstrap do
         # run_command('git init')
       end
       .blueprint(
-        active: true,
+        active: false,
         name: :bin_hook,
         description: 'initialize repository',
         on_exist: :write) do
