@@ -4,6 +4,8 @@
 
 ## To Do
 
+Good Markdown Editor: Typora
+
 - Build out a site map
   - Will drive the menu
   - Will drive the footer
