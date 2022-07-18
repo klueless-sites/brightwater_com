@@ -3,7 +3,8 @@ module.exports = {
   content: [
     './src/**/*.{html,js}',
     './js/**/*.{html,js}',
-    './*.html'
+    './*.html',
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     fontSize: {
@@ -28,6 +29,8 @@ module.exports = {
         colourWhitish: 'hsl(211,78%,95%)',
       },
     },
-  plugins: [],
+    plugins: [
+      require('flowbite/plugin')
+    ],
   }
 }

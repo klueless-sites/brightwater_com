@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightWater #1</title>
+
+  <!-- CDN Tailwind CSS, but how do you configure it -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="/dist/output.css">
+
+  <!-- SEAN: How do we use this font in Tailwind CSS -->
+  <!-- https://tailwindcss.com/docs/font-family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <!-- <script src="../path/to/flowbite/dist/flowbite.js"></script> -->
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+  <script type="module" src="javascript/components/my-header.js"></script>
+  <script type="module" src="javascript/components/my-footer.js"></script>
+</head>
+<body class="h-screen bg-blue-200 flex flex-col">
+  <header>
+    <my-header></my-header>
+    <!-- SEAN: This nav is from Flowbit: https://flowbite.com/docs/components/dropdowns/ -->
+    <!-- How do we get a clickable menu -->
+  </header>
+
+  <!-- <main class="container mx-auto"> -->
+  <main>
+
+    <!-- SEAN: Can you set the height and background color of this section -->
+    <!-- Gray section -->
+    <!-- Paragraphs need line height and font size improvement -->
+    <section class="bg-gray-200">
+      <div class="container px-6 py-12 mx-auto">
+        <h2 class="text-2xl font-semibold text-black uppercase">ABOUT US</h2>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <my-footer></my-footer>
+  
+</body>
+</html>
+

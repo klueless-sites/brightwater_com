@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightWater #1</title>
+
+  <!-- CDN Tailwind CSS, but how do you configure it -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="/dist/output.css">
+
+  <!-- SEAN: How do we use this font in Tailwind CSS -->
+  <!-- https://tailwindcss.com/docs/font-family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <!-- <script src="../path/to/flowbite/dist/flowbite.js"></script> -->
+
+  <!-- 
+    SEAN: THIS CDN call should really be using the /dist folder
+
+    The ./dist folder needs to be built
+
+    How to setup Tailwind CSS and build the dist folder using Vite
+  -->
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+  <script type="module" src="javascript/components/my-header.js"></script>
+  <script type="module" src="javascript/components/my-footer.js"></script>
+</head>
+<body class="h-screen bg-blue-200 flex flex-col">
+  <header>
+    <!--
+      How do we use Webpacker or Something (VITE)
+      Bundle up Tailwind & Flowbite & Custom JS
+    -->
+
+
+    <my-header></my-header>
+
+    <!-- HERO -->
+    <div class="w-full bg-center bg-cover h-[32rem]" style="background-image: url(/images/hero.jpeg)">
+        <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
+            <div class="text-center">
+              <h1 class="text-5xl font-semibold text-gray-400 uppercase">Business Growth Starts Here</h1>
+              <h2 class="text-2xl font-semibold text-white uppercase">Digital Marketing & Web Design</h2>
+              <button class="px-4 py-2 mt-4 text-sm font-medium text-white uppercase transition-colors duration-200 transform bg-orange-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Let's Talk Digital</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEAN: How do we have an angular div that overlays the image creating a angle effect -->
+  </header>
+
+  <!-- <main class="container mx-auto"> -->
+  <main>
+
+    <!-- SEAN: Can you set the height and background color of this section -->
+    <!-- Gray section -->
+    <!-- Paragraphs need line height and font size improvement -->
+    <section class="bg-gray-200">
+      <div class="container px-6 py-12 mx-auto">
+        <h2 class="text-2xl font-semibold text-black uppercase">Digital Marketing &amp; Web Development Agency</h2>
+        <p class="text-gray-500">
+          Worldwide we help businesses gain more leads and brand awareness by reassessing and improving their online presence. We provide unique
+          <a href="https://www.griddigitalmarketing.com/web-development-and-design/">
+            <span class="text-orange-600 underline">web design&nbsp;</span>
+          </a>combined with an extensive <a href="https://www.griddigitalmarketing.com/search-engine-optimization/">
+            <span class="text-orange-600 underline">search engine optimization</span>
+          </a>, 
+          <a href="https://www.griddigitalmarketing.com/search-engine-advertising/">
+            <span class="text-orange-600 underline">online advertising</span>
+          </a>&nbsp;and 
+          <a href="https://www.griddigitalmarketing.com/content-marketing/">
+            <span class="text-orange-600 underline">content strategy</span>
+          </a> to ensure business growth.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container px-6 py-12 mx-auto">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Search Engine Optimization</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">We help you improve your Google ranking and increase your organic (non-paid) website traffic. SEO is more than just incorporating keywords and we can help to optimize all elements.</p>
+          </div>
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Search Engine Advertising</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">Search engine advertising, also known as pay-per-click advertising, helps you reach new customers and guarantees a consistent traffic flow to your website.</p>
+          </div>
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Web Development &amp; Design</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">Websites are the essence of your online presence. We will create a functional website that is customized for your business and drives results. All of our websites include SEO, and lead generation tools.</p>
+          </div>
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Social Media Marketing</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">We help you with social media management and advertising to help you grow your business and reach new clients.</p>
+          </div>
+
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Content Marketing</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">Content marketing helps you increase online visibility, traffic and brand awareness. We offer effective SEO-copywriting that&nbsp;<span>resonates with your target audience.</p>
+          </div>
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Digital Marketing Strategy</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">Get your own digital marketing strategy built from scratch. Schedule a&nbsp;<strong><a href="https://griddigitalmarketing.com/contact/"><span class="text-orange-600 underline">free consultation</span></a></strong>&nbsp;to get started.</p>
+          </div>
+        </div>
+        <!-- SEAN: Center this -->
+        <button class="px-4 py-2 mt-4 text-sm font-medium text-white uppercase transition-colors duration-200 transform bg-orange-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Let's Work Together</button>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <!-- We need to figure out how to do slide carrousel control for each of the testimonials -->
+    <section class="bg-gray-200">
+      <div class="container px-6 py-12 mx-auto">
+        <h2 class="text-2xl font-semibold text-black uppercase">Testimonials &amp; Featured Clients</h2>
+
+        <!-- This is one FAQ  -->
+        <!-- Needs styling applied -->
+        <div>
+          <h3 class="text-1xl text-black">51,05% more organic website visitors compared to last year.</h3>
+          <p><em>In the process of optimization, our online presence on Google has improved a lot. Claire and Arthur offer great suggestions on how we can continue to improve our website and online findability. I am very pleased with their services, communication and results.</em></p>
+          <p><strong>Marcel van Willigen</strong>, Broker/ Co-owner @ Century 21 Ballena Properties</p>
+        </div>
+
+        <div class="hidden">
+          <h3 class="text-1xl text-black">90.7% new user growth in the last 3 months</h3>
+          <p><em>We started working with Grid Marketing in October 2019 when they created a new website for us and started managing our digital marketing. We are very glad we decided to work with them, and they have done a great job on the website and in the marketing. It is really great how easy our website is to manage and how many more inquiries we have had since we made the change. It is wonderful how well Grid Marketing knows their job and the amazing positive attitude and openness they have for any suggestions that might arise. We are very happy and we want to thank them for a great service!</em></p>
+          <p><strong>Alejandro Becerril</strong>, Reservations &amp; Concierge Manager @ Luna Cabo Property Management</p>
+        </div>
+
+        <div class="hidden">
+          <h3 class="text-1xl text-black">We are very satisfied with the new website</h3>
+        </div>
+
+        <div class="hidden">
+          <h3 class="text-1xl text-black"></h3>
+          <p><strong>Vincent ‘T Hart</strong>,&nbsp; Physical Therapist / Owner @ Fysiotherapie Vitaal</p>
+        </div>
+
+        <div class="hidden">
+          <h3 class="text-1xl text-black">116.14% more social traffic compared to last year</h3>
+          <p><em>In 2018 I started with Grid Marketing in order to raise brand awareness and increase sales via Social Media Advertising. Since then I have experienced a noticeable growth within my target audience. The communication is quick and professional and during the monthly analyses due consideration is always given to my personal wishes and ideas. I would certainly recommend Grid Marketing to any company that wants to get more out of their Social Media campaigns!</em></p>
+          <p><strong>Eva Luna</strong>, Online Health &amp; Lifestyle Coach @ Eva Luna Lifestyle</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BRAND PROOF -->
+    <section class="white">
+      <div class="container px-6 py-20 mx-auto">
+
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full px-4">
+            <div class="flex flex-wrap justify-center items-center">
+              <a href="javascript:void(0)" class="w-[150px] 2xl:w-[180px] py-5 flex items-center justify-center mx-4">
+                <img src="https://cdn.tailgrids.com/1.0/assets/images/brands/graygrids.svg" alt="image" class="w-full h-10" />
+              </a>
+              <a href="javascript:void(0)" class="w-[150px] 2xl:w-[180px] py-5 flex items-center justify-center mx-4">
+                <img src="https://cdn.tailgrids.com/1.0/assets/images/brands/lineicons.svg" alt="image" class="w-full h-10" />
+              </a>
+              <a href="javascript:void(0)" class="w-[150px] 2xl:w-[180px] py-5 flex items-center justify-center mx-4">
+                <img src="https://cdn.tailgrids.com/1.0/assets/images/brands/uideck.svg" alt="image" class="w-full h-10" />
+              </a>
+              <a href="javascript:void(0)" class="w-[150px] 2xl:w-[180px] py-5 flex items-center justify-center mx-4">
+                <img src="https://cdn.tailgrids.com/1.0/assets/images/brands/ayroui.svg" alt="image" class="w-full h-10" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="bg-gray-200">
+      <div class="container px-6 py-12 mx-auto">
+        <h2 class="text-2xl font-semibold text-black uppercase">SECTION</h2>
+      </div>
+    </section>
+
+    <section class="white">
+      <div class="container px-6 py-12 mx-auto">
+        <h2 class="text-2xl font-semibold text-black uppercase">SECTION</h2>
+      </div>
+    </section>
+
+    <section class="bg-gray-200">
+      <div class="container px-6 py-12 mx-auto">
+        <h2 class="text-2xl font-semibold text-black uppercase">SECTION</h2>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <my-footer></my-footer>
+  
+</body>
+</html>
+
