@@ -7,7 +7,7 @@ class MyHeader extends HTMLElement {
     <div class="container flex flex-wrap items-center justify-between mx-auto">
       <a href="#" class="flex">         
         <div class="flex items-center">
-          <img src="images/brightwater-logo.png" class="h-32 flex" alt="BrightWater Logo" />
+          <img src="images/brightwater-logo.png" class="h-8 flex" alt="BrightWater Logo" />
           <!-- <span style="font-size: 4rem" class="text-colourAqua1 text-7xl absolute pl-20 top-4"><span class="text-colourWhitish">r</span><span class="text-colourAqua2">i</span>ghtWater</span> -->
         </div>
       </a>
