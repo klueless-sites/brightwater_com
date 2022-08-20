@@ -1,87 +1,61 @@
-# Brightwater.com
-
-> Sample website for Brightwater Digital
-
-![](./screenshot.png)
-
-
-## User Story
+# Astro Starter Kit: Blog
 
 ```
-As an SEO consultant
-I want a high performing website with products and content strategy guides
-So that new clients trust that we can deliver for them.
+npm init astro -- --template blog
 ```
 
-## Stage 1 Tasks
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
 
-- Color Theme
-  - Two colors from logo
-  - Plus one or two highlights
-- Use TailwindCSS framework
-  - Partially done
-  - Proof of concept
-  - TODO: TailwindCSS with color configuration
-  - See colour theme
-- Build package management that is flexible enough allow any JS library and/or Tailwind CSS workflow.
-  - Spike
-  - Proof of concept
-  - TODO: based on the spike we did last week, we should ensure that at least one JS library is working, eg. momentjs
-  - We should use basic web-components that get bundled into main.js
-- Home page needs to have well written content that can be found in documentation
-  - Partially done
-- Deploy to simple static hosting
-  - Spike
-- Build a nice home page for the site
-  - Partially done
-- Build one or two sales landing pages, more to come later on
-  - Not started
-- Blog/Articles listing + individual article
-  - Not started
-- Auxillary pages
-  - About, Contact us, Terms, Privacy
-- DNS / Domain registration
-  - www.brightwater.com
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## Stage 2 Tasks
+Features:
 
-- Improve on the design
-- JAM Stack, Static Site Generation
-  - Support Markdown Blog Posts for content marketing
-- SAAS Content management tool
+- ✅ Minimal styling (make it your own!)
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ Sitemap support
+- ✅ RSS Feed support
+- ✅ Markdown & MDX support
 
-## Resources
+## 🚀 Project Structure
 
-### Target Themes
-
-[https://www.griddigitalmarketing.com/](https://www.griddigitalmarketing.com/)
-[https://redskydigital.com/us/digital-marketing/](https://redskydigital.com/us/digital-marketing/)
-
-### Tailwind
-
-[https://merakiui.com/components/](https://merakiui.com/components/)
-
-
-## Acceptance Criteria
-
-Here are the critical requirements necessary to develop a portfolio that satisfies David Kaff's needs:
-These requirements are for stage 1
+Inside of your Astro project, you'll see the following folders and files:
 
 ```
-GIVEN I need a professional website to promote my business and services
-WHEN I access http://www.brightwater.com
-THEN I will see a professional landing page with my basic services and links to extra information.
-AND I will see a color scheme that matches my branding
-WHEN I click on one of the services
-THEN I should be taken to a landing page that list my services, features and benefits
-WHEN I click on the articles list
-THEN I see a list of articles that I have written that add quality information and SEO value to my domain
-WHEN I click on an article
-THEN I see a SEO friendly article/blog post with headline, image, synopsis and content
-WHEN I click on auxillary page links
-THEN I taken to simple information pages for about, contact me, terms and conditions, privacy etc.
+├── public/
+├── src/
+│   ├── components/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
 ```
 
-## Copyright
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-Copyright (c) David Cruwys. See [MIT License](LICENSE.txt) for further details.
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `npm install`          | Installs dependencies                            |
+| `npm run dev`          | Starts local dev server at `localhost:3000`      |
+| `npm run build`        | Build your production site to `./dist/`          |
+| `npm run preview`      | Preview your build locally, before deploying     |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Credit
+
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).

@@ -1,16 +1,18 @@
 {
-  "name": "brightwater_com",
-  "version": "1.0.0",
-  "description": "Sample website for Brightwater Digital",
+  "name": "@example/blog",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "tailwindcss": "^3.1.6"
-  },
-  "dependencies": {
-    "flowbite": "^1.5.1"
+    "@astrojs/mdx": "^0.10.0",
+    "@astrojs/rss": "^1.0.0",
+    "@astrojs/sitemap": "^1.0.0",
+    "astro": "^1.0.6"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "name": "brightwater_com",
+  "version": "1.0.0",
+  "description": "Sample website for Brightwater Digital",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.6"
+  },
+  "dependencies": {
+    "flowbite": "^1.5.1"
+  }
+}
