@@ -1,15 +1,169 @@
 ---
+import Layout from "../layouts/PageLayout.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import Button from "../components/Button.astro";
+import BrandProof from "../components/BrandProof.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+
+// import { Feature } from "../types";
+import features from "../features.json";
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Welcome to Brightwater">
+  <Hero />
+
+  <main>
+
+    <!-- SEAN: Can you set the height and background color of this section -->
+    <!-- Gray section -->
+    <!-- Paragraphs need line height and font size improvement -->
+
+
+    <Section title="Digital Marketing &amp; Web Development Agency" variant="dark">
+      <p class="text-gray-500">
+        Worldwide we help businesses gain more leads and brand awareness by reassessing and improving their online presence. We provide unique
+        <a href="https://www.griddigitalmarketing.com/web-development-and-design/">
+          <span class="text-orange-600 underline">web design&nbsp;</span>
+        </a>combined with an extensive <a href="https://www.griddigitalmarketing.com/search-engine-optimization/">
+          <span class="text-orange-600 underline">search engine optimization</span>
+        </a>, 
+        <a href="https://www.griddigitalmarketing.com/search-engine-advertising/">
+          <span class="text-orange-600 underline">online advertising</span>
+        </a>&nbsp;and 
+        <a href="https://www.griddigitalmarketing.com/content-marketing/">
+          <span class="text-orange-600 underline">content strategy</span>
+        </a> to ensure business growth.
+      </p>
+    </Section>
+
+    <Section>
+      <div class="container px-6 py-12 mx-auto">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
+          {features.map((feature) => (
+            <FeatureCard {...feature} />
+          ))}
+        </div>
+      </div>
+    </Section>
+
+    <section class="bg-white">
+      <div class="container px-6 py-12 mx-auto">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Search Engine Optimization</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">We help you improve your Google ranking and increase your organic (non-paid) website traffic. SEO is more than just incorporating keywords and we can help to optimize all elements.</p>
+          </div>
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Search Engine Advertising</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">Search engine advertising, also known as pay-per-click advertising, helps you reach new customers and guarantees a consistent traffic flow to your website.</p>
+          </div>
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Web Development &amp; Design</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">Websites are the essence of your online presence. We will create a functional website that is customized for your business and drives results. All of our websites include SEO, and lead generation tools.</p>
+          </div>
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Social Media Marketing</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">We help you with social media management and advertising to help you grow your business and reach new clients.</p>
+          </div>
+
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Content Marketing</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">Content marketing helps you increase online visibility, traffic and brand awareness. We offer effective SEO-copywriting that&nbsp;<span>resonates with your target audience.</p>
+          </div>
+
+          <div>
+              <!-- Search SVG -->
+              <!-- FIND The right SVG -->
+              <svg class="w-8 h-8" viewBox="0 0 30 30" fill="none">
+                  <path d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z" fill="#2D3748"/><path d="M8.88087 21.578L2.67236 15L8.88087 8.42215C9.30726 7.97028 9.28664 7.25812 8.83476 6.83179C8.38323 6.4054 7.67073 6.42603 7.2444 6.87791L0.306858 14.2279C-0.102245 14.6614 -0.102245 15.3391 0.306858 15.7726L7.24475 23.123C7.466 23.3574 7.76413 23.4755 8.06302 23.4755C8.33976 23.4755 8.61767 23.3735 8.83476 23.1684C9.28705 22.742 9.30726 22.0299 8.88087 21.578Z" fill="#2D3748"/><path d="M16.8201 3.08774C16.2062 2.99476 15.6317 3.41622 15.5379 4.03011L12.2379 25.6302C12.1441 26.2445 12.566 26.8186 13.1803 26.9124C13.238 26.921 13.295 26.9252 13.3516 26.9252C13.898 26.9252 14.3773 26.5266 14.4624 25.97L17.7624 4.3699C17.8562 3.7556 17.4343 3.1815 16.8201 3.08774Z" fill="#4299E1"/>
+              </svg>
+              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Digital Marketing Strategy</h1>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">Get your own digital marketing strategy built from scratch. Schedule a&nbsp;<strong><a href="https://griddigitalmarketing.com/contact/"><span class="text-orange-600 underline">free consultation</span></a></strong>&nbsp;to get started.</p>
+          </div>
+        </div>
+        <!-- SEAN: Center this -->
+        <Button label="Let's Work Together" />
+      </div>
+    </section>
+
+    <Section title="Testimonials &amp; Featured Clients" variant="dark">
+        <div>
+          <h3 class="text-1xl text-black">51,05% more organic website visitors compared to last year.</h3>
+          <p><em>In the process of optimization, our online presence on Google has improved a lot. Claire and Arthur offer great suggestions on how we can continue to improve our website and online findability. I am very pleased with their services, communication and results.</em></p>
+          <p><strong>Marcel van Willigen</strong>, Broker/ Co-owner @ Century 21 Ballena Properties</p>
+        </div>
+
+        <div class="hidden">
+          <h3 class="text-1xl text-black">90.7% new user growth in the last 3 months</h3>
+          <p><em>We started working with Grid Marketing in October 2019 when they created a new website for us and started managing our digital marketing. We are very glad we decided to work with them, and they have done a great job on the website and in the marketing. It is really great how easy our website is to manage and how many more inquiries we have had since we made the change. It is wonderful how well Grid Marketing knows their job and the amazing positive attitude and openness they have for any suggestions that might arise. We are very happy and we want to thank them for a great service!</em></p>
+          <p><strong>Alejandro Becerril</strong>, Reservations &amp; Concierge Manager @ Luna Cabo Property Management</p>
+        </div>
+
+        <div class="hidden">
+          <h3 class="text-1xl text-black">We are very satisfied with the new website</h3>
+        </div>
+
+        <div class="hidden">
+          <h3 class="text-1xl text-black"></h3>
+          <p><strong>Vincent ‘T Hart</strong>,&nbsp; Physical Therapist / Owner @ Fysiotherapie Vitaal</p>
+        </div>
+
+        <div class="hidden">
+          <h3 class="text-1xl text-black">116.14% more social traffic compared to last year</h3>
+          <p><em>In 2018 I started with Grid Marketing in order to raise brand awareness and increase sales via Social Media Advertising. Since then I have experienced a noticeable growth within my target audience. The communication is quick and professional and during the monthly analyses due consideration is always given to my personal wishes and ideas. I would certainly recommend Grid Marketing to any company that wants to get more out of their Social Media campaigns!</em></p>
+          <p><strong>Eva Luna</strong>, Online Health &amp; Lifestyle Coach @ Eva Luna Lifestyle</p>
+        </div>
+    </Section>
+
+    <Section>
+      <BrandProof />
+    </Section>
+
+
+    <Section title="Section 1">
+      Cool Section A
+    </Section>
+
+    <Section title="Section 2" variant='dark'>
+      Cool Section B
+    </Section>
+
+    <Section title="Section 3">
+      Cool Section C
+    </Section>
+
+  </main>
+
+
+</Layout>
